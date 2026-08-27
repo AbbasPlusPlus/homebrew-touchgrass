@@ -9,10 +9,12 @@ cask "touchgrass" do
 
   app "TouchGrass.app"
 
-  caveats <<~EOS
-    TouchGrass is independently built and not notarized by Apple.
-    Install with --no-quarantine (as the website suggests) so Gatekeeper
-    doesn't object on first launch:
-      brew reinstall --cask --no-quarantine touchgrass
-  EOS
+  # TouchGrass is independently built (ad-hoc signed, not notarized). Homebrew quarantines
+  # cask downloads, which Gatekeeper then blocks outright on modern macOS — so strip the
+  # flag after install, same as the website's curl installer.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/TouchGrass.app"],
+                   must_succeed: false
+  end
 end
