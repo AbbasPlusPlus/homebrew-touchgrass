@@ -1,6 +1,6 @@
 cask "touchgrass" do
-  version "1.1.2"
-  sha256 "4533a9e5a184170801bf32cee9c405f4b84af5b5a78ced3335a2b1155b547221"
+  version "1.1.3"
+  sha256 "b736888d7e29d681189830ffd9add655a0d78c625bf666ff640bfb7ccc3f6840"
 
   url "https://github.com/AbbasPlusPlus/touchgrass-releases/releases/download/v#{version}/TouchGrass.zip"
   name "TouchGrass"
