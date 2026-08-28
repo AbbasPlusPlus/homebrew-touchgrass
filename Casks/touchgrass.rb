@@ -5,7 +5,7 @@ cask "touchgrass" do
   url "https://github.com/AbbasPlusPlus/touchgrass-releases/releases/download/v#{version}/TouchGrass.zip"
   name "TouchGrass"
   desc "Menu bar break reminder that waits for the right moment"
-  homepage "https://touchgrass-landing.vercel.app/"
+  homepage "https://grass.mohammadabbas.com/"
 
   app "TouchGrass.app"
 
