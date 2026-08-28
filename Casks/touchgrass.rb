@@ -7,7 +7,7 @@ cask "touchgrass" do
   desc "Menu bar break reminder that waits for the right moment"
   homepage "https://grass.mohammadabbas.com/"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: ">= :sequoia"
   depends_on arch: :arm64
 
   app "TouchGrass.app"
