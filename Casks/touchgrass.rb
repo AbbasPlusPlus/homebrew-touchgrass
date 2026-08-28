@@ -7,6 +7,9 @@ cask "touchgrass" do
   desc "Menu bar break reminder that waits for the right moment"
   homepage "https://grass.mohammadabbas.com/"
 
+  depends_on macos: ">= :tahoe"
+  depends_on arch: :arm64
+
   app "TouchGrass.app"
 
   # TouchGrass is independently built (ad-hoc signed, not notarized). Homebrew quarantines
